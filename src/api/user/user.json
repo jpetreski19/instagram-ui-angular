@@ -1,0 +1,46 @@
+{
+    "username": "jovan_petreski",
+    "numPosts": 4,
+    "numFollowers": 1050,
+    "numFollowing": 1050,
+    "bio": "Bio goes here...",
+    "profileImgURL": "assets/images/Moon.JPG",
+    "posts": [
+        {
+            "postId": 1,
+            "postTitle": "Blue Hour",
+            "date": "20.08.2020",
+            "imageURL": "assets/images/BlueHour.JPG",
+            "caption": "Above the world",
+            "numLikes": 220,
+            "numComments": 30
+        },
+        {
+            "postId": 2,
+            "postTitle": "Bales",
+            "date": "20.07.2020",
+            "imageURL": "assets/images/Bales.JPG",
+            "caption": "Exploring the country",
+            "numLikes": 180,
+            "numComments": 15
+        },
+        {
+            "postId": 3,
+            "postTitle": "Sunfower field",
+            "date": "16.07.2020",
+            "imageURL": "assets/images/Sunflowers.JPG",
+            "caption": "The calm before the storm",
+            "numLikes": 120,
+            "numComments": 10
+        },
+        {
+            "postId": 5,
+            "postTitle": "Meadow",
+            "date": "10.02.2021",
+            "imageURL": "assets/images/Meadow.JPG",
+            "caption": "Macro shot",
+            "numLikes": 150,
+            "numComments": 20
+        }
+    ]
+}

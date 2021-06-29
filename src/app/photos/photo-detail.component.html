@@ -1,0 +1,79 @@
+<div class="card"
+  *ngIf="user && photo">
+    <div class="card-header">
+        <h1>{{user?.username}}</h1>
+    </div>
+    <div class="card-body"
+        >
+        <div class="row">
+          <div class="col-md-6">
+            <img [src]="photo.url"
+                class="gallery-image" alt="">
+          </div>
+          <div class="col-md-8"
+            [style.width.px]="600"
+            [style.margin.px]="2">
+            <div class="row">
+              <h3>Photo Info</h3>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <h4>Title: </h4>
+              </div>
+              <div class="col-md-8">
+                <h5>{{photo.title}}</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <h4>Id: </h4>
+              </div>
+              <div class="col-md-8">
+                <h5>{{photo.id}}</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <h4>Album Id: </h4>
+              </div>
+              <div class="col-md-8">
+                <h5>{{photo.albumId}}</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <h4>URL: </h4>
+              </div>
+              <div class="col-md-8">
+                <h5>{{photo.url}}</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <h4>Thumbnail URL: </h4>
+              </div>
+              <div class="col-md-8">
+                <h5>{{photo.thumbnailUrl}}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class='card-footer'>
+      <button class='btn btn-outline-secondary'
+              style='width:90px; margin:10px;'
+              (click)='onBack()'>
+        <i class='fa fa-chevron-left'></i> Back
+      </button>
+      <button class="btn btn-danger"
+              style="width:90px; margin:10px;"
+              (click)="onDelete()">
+        Delete
+      </button>
+      <a [routerLink]="['/photos/update', user.id, photo.albumId, photo.id]" class="btn btn-primary"
+              style="width:90px; margin:10px;">
+        Update
+      </a>
+    </div>
+</div>
+

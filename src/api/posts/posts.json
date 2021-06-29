@@ -1,0 +1,38 @@
+[
+    {
+        "postId": 1,
+        "postTitle": "Blue Hour",
+        "date": "20.08.2020",
+        "imageURL": "assets/images/BlueHour.png",
+        "caption": "Above the world",
+        "numLikes": 220,
+        "numComments": 30
+    },
+    {
+        "postId": 2,
+        "postTitle": "Bales",
+        "date": "20.07.2020",
+        "imageURL": "assets/images/Bales.png",
+        "caption": "Exploring the country",
+        "numLikes": 180,
+        "numComments": 15
+    },
+    {
+        "postId": 3,
+        "postTitle": "Sunfower field",
+        "date": "16.07.2020",
+        "imageURL": "assets/images/Sunflowers.png",
+        "caption": "The calm before the storm",
+        "numLikes": 120,
+        "numComments": 10
+    },
+    {
+        "postId": 5,
+        "postTitle": "Meadow",
+        "date": "10.02.2021",
+        "imageURL": "assets/images/Meadow.png",
+        "caption": "Macro shot",
+        "numLikes": 150,
+        "numComments": 20
+    }
+]

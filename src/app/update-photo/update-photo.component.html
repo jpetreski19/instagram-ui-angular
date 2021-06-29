@@ -1,0 +1,59 @@
+<div class="card"
+    *ngIf="newPhoto">
+    <div class="card-header">
+        <h2>Update Photo</h2>
+    </div>
+
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input id="title" name="title" class="form-control"
+                    [(ngModel)]="newPhoto.title"
+                    required #titleField="ngModel"
+                    [class.field-error]="form.submitted && titleField.invalid" />
+                <div [hidden]="!form.submitted || titleField.valid"
+                    class="alert alert-danger">
+                    Enter title
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="url">URL</label>
+                <input id="url" name="url" class="form-control"
+                    [(ngModel)]="newPhoto.url"
+                    required #urlField="ngModel"
+                    [class.field-error]="form.submitted && urlField.invalid" />
+                <div [hidden]="!form.submitted || urlField.valid"
+                    class="alert alert-danger">
+                    Enter image url
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="thumbnailUrl">Thumbnail URL</label>
+                <input id="thumbnailUrl" name="thumbnailUrl" class="form-control"
+                    [(ngModel)]="newPhoto.thumbnailUrl"
+                    required #thumbnailUrlField="ngModel"
+                    [class.field-error]="form.submitted && thumbnailUrlField.invalid" />
+                <div [hidden]="!form.submitted || thumbnailUrlField.valid"
+                    class="alert alert-danger">
+                    Enter image url
+                </div>
+            </div>
+        
+
+            <div class="form-group">
+                <label class="form-label" for="customFile">Pick your photo</label>
+                <input type="file" class="form-control" id="customFile" />
+            </div>
+
+            <div [hidden]="!postError" class="alert alert-danger">
+                {{ postErrorMessage }}
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <button class="btn btn-primary"
+            style="width:90px; margin:10px;">Save</button>
+        </div>
+    </form>
+</div>

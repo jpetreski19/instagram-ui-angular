@@ -1,0 +1,52 @@
+<div class="mycontainer">
+    <div class="profile" *ngIf="user">
+        <div class="profile-image">
+        <img src="https://images.unsplash.com/photo-1515814472071-4d632dbc5d4a?w=500&h=500&fit=crop"
+            width="200"
+            height="200"
+            alt="">
+        </div>
+        <div class="profile-user-settings">
+            <h1 class="profile-user-name">{{ user.username }}</h1>
+            <button class="mybtn profile-edit-btn">Edit Profile</button>
+            <a [routerLink]="['/photos/add', userId, albumId]"
+                class="mybtn profile-edit-btn">
+                <i class="fas fa-plus"></i>
+            </a>
+            <button class="mybtn profile-settings-btn" aria-label="profile settings"><i class="fas fa-cog" aria-hidden="true"></i></button>
+        </div>
+        <div class="profile-stats">
+            <ul>
+                <li><span class="profile-stat-count">{{ photos.length }}</span> posts</li>
+                <li><span class="profile-stat-count">1050</span> followers</li>
+                <li><span class="profile-stat-count">1050</span> following</li>
+            </ul>
+        </div>
+        <div class="profile-bio">
+        <p><span class="profile-real-name">{{ user.name }}</span> : {{ user.email }} </p>
+        </div>
+    </div>
+</div>
+<div class="mycontainer">
+    <div class="gallery">
+        <a [routerLink]="['/photos', userId, photo.albumId, photo.id]"
+            class="gallery-item" tabindex="0"
+            *ngFor='let photo of photos'>
+            <img [src]="photo.thumbnailUrl"
+                class="gallery-image" alt="">
+
+            <div class="gallery-item-info">
+                <ul>
+                <li class="gallery-item-likes"><span class="visually-hidden"></span> {{ photo.title }} </li>
+                </ul>
+                <!-- <ul>
+                    <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> {{ post.numLikes }}</li>
+                    <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> {{ post.numComments }}</li>
+                </ul> -->
+            </div>
+        </a>
+    </div>
+</div>
+<div *ngIf='errorMessage' class='alert alert-danger'>
+    Error: {{ errorMessage }}
+</div>

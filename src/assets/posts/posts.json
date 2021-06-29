@@ -1,0 +1,11 @@
+[
+    {
+        "postId": 1,
+        "postTitle": "Blue Hour",
+        "date": "20.08.2020",
+        "imageURL": "assets/images/BlueHour.png",
+        "caption": "Above the world",
+        "numLikes": 220,
+        "numComments": 30
+    }
+]
