@@ -4,6 +4,7 @@ import { Photo } from '../user/photo';
 import { User } from '../user/user';
 import { UserService } from '../user/user.service';
 
+
 @Component({
   templateUrl: './photo-detail.component.html',
   styleUrls: ['./photo-detail.component.css']
@@ -49,6 +50,8 @@ export class PhotoDetailComponent implements OnInit {
 
   onDelete(): void {
     if (this.photo) {
+      // Prompt a confirmation dialog
+
       if(confirm("Are you sure to delete this photo?")) {
         this.userService.deletePhotoAPI(this.photo.id);
         this.router.navigate(['/photos']);
@@ -62,5 +65,6 @@ export class PhotoDetailComponent implements OnInit {
       console.log("Done");
     }
   }
+
 
 }

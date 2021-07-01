@@ -15,14 +15,22 @@ export class PhotoDetailGuard implements CanActivate {
     const userId = Number(route.paramMap.get('userId'));
     const albumId = Number(route.paramMap.get('albumId'));
     if (isNaN(id) || id < 1) {
-        alert('Invalid photo id');
-        this.router.navigate(['']);
-        return false;
+      // Photo id is invalid
+
+      alert('Invalid photo id');
+      this.router.navigate(['']);
+      return false;
+
     } else if (userId != 5) {
+      // User id is not correct
+
       alert('Invalid user id');
       this.router.navigate(['']);
       return false;
+
     } else if (albumId != 50) {
+      // Album id is not correct
+      
       alert('Invalid album id');
       this.router.navigate(['']);
       return false;

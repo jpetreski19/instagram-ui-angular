@@ -9,6 +9,10 @@ import { catchError, map, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class PostService {
+  /**
+   * Works with posts instead of users. Works if the posts.json is used
+   * as api. Currently not used.
+   */
   private postURL = 'api/posts/posts.json';
 
   constructor(private http: HttpClient) { }

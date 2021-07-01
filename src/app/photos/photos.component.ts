@@ -15,6 +15,8 @@ export class PhotosComponent implements OnInit, OnDestroy {
   sub!: Subscription;
   user!: User;
 
+  // Hard code the user and album ids due to the way
+  // the api is designed (photos are not directly related to users).
   userId = 5;
   albumId = 50;
   photos: Photo[] = [];

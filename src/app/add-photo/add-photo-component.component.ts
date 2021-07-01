@@ -16,6 +16,7 @@ export class AddPhotoComponent implements OnInit {
               private router: Router,
               private userService: UserService) { }
 
+  // Keeps the original settings. The id is set to a junk value as new id is given.
   originalFields: Photo = {
     albumId: 50,
     id: -1,
